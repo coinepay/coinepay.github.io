@@ -177,8 +177,8 @@
 
 <header>
   <div class="nav-buttons">
-    <a href="https://www.coinepay.net/#/pages/auth/register">注册</a>
-    <a href="https://www.coinepay.net/">登录</a>
+    <a   type = "button" onclick = "gtag_report_conversion()"  href="https://www.coinepay.net/#/pages/auth/register">注册</a>
+    <a   type = "button" onclick = "gtag_report_conversion()"      href="https://www.coinepay.net/">登录</a>
   </div>
 
   <div class="lang-switcher">
@@ -243,11 +243,11 @@
   </div>
 
   <div class="cta">
-    <a href="https://www.coinepay.net/">立即开通虚拟卡</a>
+    <a     type = "button" onclick = "gtag_report_conversion()"     href="https://www.coinepay.net/">立即开通虚拟卡</a>
   </div>
 
 <div class="cta">
-    <a href="https://chat.ssrchat.com/service/grpect">24小时在线客服</a>
+    <a    type = "button" onclick = "gtag_report_conversion()"  href="https://chat.ssrchat.com/service/grpect">24小时在线客服</a>
   </div>
 
   
@@ -290,6 +290,28 @@
 
   gtag('config', 'AW-17198528310');
 </script>
+
+
+<!-- Event snippet for 出站点击 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17198528310/kNt5CNewh9oaELbu8ohA',
+      'value': 5.0,
+      'currency': 'HKD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+  
   
 
 </body>
