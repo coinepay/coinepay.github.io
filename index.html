@@ -16,8 +16,22 @@
     header {
       background-color: #1a73e8;
       color: white;
-      padding: 40px 20px;
+      padding: 20px 20px 40px;
       text-align: center;
+      position: relative;
+    }
+
+    .lang-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .lang-switcher select {
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: none;
+      font-size: 14px;
     }
 
     header h1 {
@@ -29,12 +43,28 @@
       font-size: 18px;
     }
 
+    .nav-buttons {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .nav-buttons a {
+      background-color: white;
+      color: #1a73e8;
+      padding: 8px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
     .container {
       max-width: 1000px;
       margin: 40px auto;
       padding: 20px;
       background-color: white;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
       border-radius: 12px;
     }
 
@@ -55,6 +85,50 @@
 
     .feature h3 {
       color: #1a73e8;
+    }
+
+    .logos {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .logos img {
+      height: 40px;
+      margin: 0 20px;
+      vertical-align: middle;
+    }
+
+    .faq-section {
+      margin-top: 40px;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      padding: 12px;
+      font-size: 16px;
+      background-color: #e8f0fe;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .faq-question:hover {
+      background-color: #d2e3fc;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 10px 15px;
+      background-color: #f6f9ff;
+      border-radius: 6px;
+      font-size: 15px;
+      margin-top: 5px;
     }
 
     .cta {
@@ -83,121 +157,119 @@
       color: #777;
     }
 
-.faq-section {
-  margin-top: 30px;
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
-}
+    @media (max-width: 600px) {
+      .feature {
+        flex: 1 1 100%;
+      }
 
-.faq-item {
-  margin-bottom: 15px;
-}
-
-.faq-question {
-  width: 100%;
-  text-align: left;
-  padding: 12px;
-  font-size: 16px;
-  background-color: #e8f0fe;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-
-.faq-question:hover {
-  background-color: #d2e3fc;
-}
-
-.faq-answer {
-  display: none;
-  padding: 10px 15px;
-  margin-top: 5px;
-  background-color: #f6f9ff;
-  border-radius: 6px;
-  font-size: 15px;
-  color: #444;
-}
-
-
-
-    
+      .nav-buttons,
+      .lang-switcher {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Coinepay 虚拟信用卡</h1>
-    <p>安全便捷 · 支持全球支付 · 即开即用</p>
-  </header>
+<header>
+  <div class="nav-buttons">
+    <a href="#">注册</a>
+    <a href="#">登录</a>
+  </div>
 
-  <div class="container">
-    <h2>为什么选择 Coinepay 虚拟卡？</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>⚡ 即时发卡</h3>
-        <p>几分钟内生成卡号，绑定 Apple Pay、Google Pay 无压力。</p>
-      </div>
-      <div class="feature">
-        <h3>🔒 高度安全</h3>
-        <p>每笔支付都独立加密，防止盗刷与隐私泄露。</p>
-      </div>
-      <div class="feature">
-        <h3>🌍 全球可用</h3>
-        <p>支持 Amazon、Google、LinkedIn、DMM、Netflix 等平台。</p>
-      </div>
-      <div class="feature">
-        <h3>💳 可控额度</h3>
-        <p>单卡限额设置灵活，按需充值，便于预算管理。</p>
-      </div>
+  <div class="lang-switcher">
+    <select id="languageSwitcher">
+      <option value="zh">中文</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+  <h1 data-lang="zh">Coinepay 虚拟信用卡</h1>
+  <h1 data-lang="en" style="display: none;">Coinepay Virtual Card</h1>
+
+  <p data-lang="zh">安全便捷 · 支持全球支付 · 即开即用</p>
+  <p data-lang="en" style="display: none;">Safe & Instant · Global Support · Ready to Use</p>
+</header>
+
+<div class="container">
+  <h2 data-lang="zh">我们的优势</h2>
+  <h2 data-lang="en" style="display: none;">Why Choose Us</h2>
+
+  <div class="features">
+    <div class="feature">
+      <h3>⚡ 即时发卡</h3>
+      <p>几分钟内生成卡号，可立即使用。</p>
+    </div>
+    <div class="feature">
+      <h3>🔒 安全防护</h3>
+      <p>多重验证与限额机制，保障资金安全。</p>
+    </div>
+    <div class="feature">
+      <h3>🌍 全球适用</h3>
+      <p>可用于 Amazon、DMM、Google、Apple Pay 等平台。</p>
+    </div>
+  </div>
+
+  <div class="logos">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Mastercard-logo.png" alt="MasterCard">
+  </div>
+
+  <div class="faq-section">
+    <h2 data-lang="zh">常见问题</h2>
+    <h2 data-lang="en" style="display: none;">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question" data-lang="zh">什么是虚拟卡？</button>
+      <button class="faq-question" data-lang="en" style="display: none;">What is a virtual card?</button>
+      <div class="faq-answer">虚拟卡是在线发行的卡片，具有真实卡号，用于安全支付和订阅服务。</div>
     </div>
 
-    <div class="cta">
-      <a href="#">立即开通虚拟卡</a>
+    <div class="faq-item">
+      <button class="faq-question" data-lang="zh">支持哪些平台？</button>
+      <button class="faq-question" data-lang="en" style="display: none;">Which platforms are supported?</button>
+      <div class="faq-answer">支持 Amazon、Google、LinkedIn、DMM、Apple Pay 等主流平台。</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question" data-lang="zh">如何充值？</button>
+      <button class="faq-question" data-lang="en" style="display: none;">How do I recharge?</button>
+      <div class="faq-answer">您可以通过银行转账或 USDT 加密货币充值。</div>
     </div>
   </div>
 
-<h2>常见问题解答（FAQ）</h2>
-<div class="faq-section">
-  <div class="faq-item">
-    <button class="faq-question">Q: 什么是虚拟信用卡？</button>
-    <div class="faq-answer">虚拟信用卡是一种不需要实体卡片即可使用的支付方式，拥有真实卡号和CVV，可用于网购、订阅和绑定支付平台。</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">Q: 支持哪些平台绑定？</button>
-    <div class="faq-answer">支持绑定 Apple Pay、Google Pay，也可用于 LinkedIn、亚马逊、DMM、阿里云、Telegram 等平台。</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">Q: 如何充值虚拟卡？</button>
-    <div class="faq-answer">您可以通过银行转账、USDT 加密货币或指定第三方支付平台对虚拟卡进行充值。</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">Q: 虚拟卡是否可以重复使用？</button>
-    <div class="faq-answer">可以，每张卡都可以反复使用，直到余额用完或者您主动销卡。</div>
+  <div class="cta">
+    <a href="#">立即开通虚拟卡</a>
   </div>
 </div>
 
-  
-
-  <footer>
-    © 2025 Coinepay. 版权所有。
-  </footer>
+<footer>
+  © 2025 Coinepay. All rights reserved.
+</footer>
 
 <script>
+  // FAQ 展开功能
   document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
       const answer = button.nextElementSibling;
-      const isVisible = answer.style.display === 'block';
-      document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-      answer.style.display = isVisible ? 'none' : 'block';
+      document.querySelectorAll('.faq-answer').forEach(ans => {
+        if (ans !== answer) ans.style.display = 'none';
+      });
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+
+  // 多语言切换
+  const switcher = document.getElementById('languageSwitcher');
+  switcher.addEventListener('change', () => {
+    const selected = switcher.value;
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.style.display = el.getAttribute('data-lang') === selected ? '' : 'none';
     });
   });
 </script>
 
-
-
-
-  
 </body>
 </html>
-
