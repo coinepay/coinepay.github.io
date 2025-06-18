@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telegram 电报会员开通教程</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f4f8;
+    }
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2 {
+      color: #0088cc;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    .step {
+      background: #e6f4fa;
+      border-left: 5px solid #0088cc;
+      padding: 15px 20px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+    }
+    a {
+      color: #0088cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Telegram Premium 会员介绍</h1>
+    <p>Telegram Premium 是 Telegram 推出的<strong class="highlight">付费订阅服务</strong>，为用户提供更多实用功能和尊享特权，包括：</p>
+    <ul>
+      <li>📤 <strong>更大文件上传</strong>：支持上传最大 4GB 的文件</li>
+      <li>⚡ <strong>更快的下载速度</strong>：享受专属高速通道</li>
+      <li>📝 <strong>语音转文字</strong>：将语音消息一键转换为文字</li>
+      <li>🌟 <strong>专属表情与贴纸</strong>：访问高级动画表情和独家贴纸</li>
+      <li>🧹 <strong>聊天管理增强</strong>：可设置默认文件夹、自动归类等功能</li>
+      <li>🔕 <strong>免广告体验</strong>：移除 Telegram 官方频道中的广告</li>
+      <li>🔧 <strong>更多个性化设置</strong>：更多 App 图标、动态头像等</li>
+    </ul>
+
+    <h2>使用 Coinepay 虚拟卡开通教程</h2>
+
+    <div class="step">
+      <strong>步骤 1：</strong> 前往 <a href="https://www.coinepay.com" target="_blank">Coinepay 官网</a> 并注册账号。
+    </div>
+
+    <div class="step">
+      <strong>步骤 2：</strong> 充值账户余额（支持 USDT / 加密货币）。
+    </div>
+
+    <div class="step">
+      <strong>步骤 3：</strong> 创建一张虚拟信用卡，记下卡号、有效期和 CVV 信息。
+    </div>
+
+    <div class="step">
+      <strong>步骤 4：</strong> 打开 Telegram 应用，进入“设置” > “Telegram Premium”。
+    </div>
+
+    <div class="step">
+      <strong>步骤 5：</strong> 选择订阅方案（按月或年），点击付款并输入 Coinepay 虚拟卡信息完成支付。
+    </div>
+
+    <div class="step">
+      <strong>提示：</strong> 如付款失败，请确保卡内余额足够，并绑定真实账单地址（可在 Coinepay 设置中查看）。
+    </div>
+
+    <p>完成以上步骤后，你即可开启 Telegram Premium，享受会员尊享体验！🎉</p>
+  </div>
+</body>
+</html>
